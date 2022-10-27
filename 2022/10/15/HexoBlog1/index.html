@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"ender8848.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="一份简短的Hexo-NexT样式个人博客搭建笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo-NexT博客搭建(一)基本配置">
+<meta property="og:url" content="https://ender8848.github.io/2022/10/15/HexoBlog1/index.html">
+<meta property="og:site_name" content="知行合一">
+<meta property="og:description" content="一份简短的Hexo-NexT样式个人博客搭建笔记">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ender8848.github.io/2022/10/15/HexoBlog1/hexo-init-fashion.jpg">
+<meta property="og:image" content="https://ender8848.github.io/2022/10/15/HexoBlog1/next-init-fashion.jpg">
+<meta property="og:image" content="https://ender8848.github.io/2022/10/15/HexoBlog1/next-configured-fashion.jpg">
+<meta property="article:published_time" content="2022-10-15T06:19:52.000Z">
+<meta property="article:modified_time" content="2022-10-27T03:39:49.496Z">
+<meta property="article:author" content="Hao Huang">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="NexT">
+<meta property="article:tag" content="Blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ender8848.github.io/2022/10/15/HexoBlog1/hexo-init-fashion.jpg">
+
+<link rel="canonical" href="https://ender8848.github.io/2022/10/15/HexoBlog1/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Hexo-NexT博客搭建(一)基本配置 | 知行合一</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">知行合一</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">执着于理想，纯粹于当下</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://ender8848.github.io/2022/10/15/HexoBlog1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/logo/logo.jpg">
+      <meta itemprop="name" content="Hao Huang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="知行合一">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Hexo-NexT博客搭建(一)基本配置
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-10-15 14:19:52" itemprop="dateCreated datePublished" datetime="2022-10-15T14:19:52+08:00">2022-10-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-10-27 11:39:49" itemprop="dateModified" datetime="2022-10-27T11:39:49+08:00">2022-10-27</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Hexo-NexT%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">Hexo-NexT博客搭建</span></a>
+                </span>
+            </span>
+
+          
+            <div class="post-description">一份简短的Hexo-NexT样式个人博客搭建笔记</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="为什么使用Hexo"><a href="#为什么使用Hexo" class="headerlink" title="为什么使用Hexo"></a>为什么使用Hexo</h1><p>搭建个人博客是我一直想做，也一直纠结如何实现的事。之前的一些想法和笔记都依托于问答式的平台（例如知乎，豆瓣，CSDN），但有时候平台的发展模式并不讨人欢喜，在网络世界中有自己阵地的想法愈发强烈，但由于对前端框架不熟悉，对博客样式没有明确的目标，因而一直没有付诸行动。直到我看到了下面的博客 – <blockquote><footer><strong>Liam Huang</strong><cite><a target="_blank" rel="noopener" href="https://liam.page/">始终</a></cite></footer></blockquote></p>
+<p>这个博客站点的样式就很合我意，内容导向，简洁干净，功能合理，这不得照猫画虎搭一个 :-)</p>
+<p>不过我也有自己的一些额外要求，我希望它能满足：</p>
+<ul>
+<li>样式配置要简单，不应成为写博客的阻碍；</li>
+<li>只需要关注于内容写作，此外的全部过程都尽可能自动化，无感化。</li>
+</ul>
+<p>好在，基于Hexo框架的，搭配自动部署的博客完美符合上述条件。</p>
+<h1 id="Hexo站点配置"><a href="#Hexo站点配置" class="headerlink" title="Hexo站点配置"></a>Hexo站点配置</h1><p>对于什么是Hexo，Hexo环境配置以及基本使用，可以参考<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo官方文档</a>。</p>
+<p>不附加主题的情况下，按照Hexo官方教程搭建的站点页面是这样的:</p>
+<img src="/2022/10/15/HexoBlog1/hexo-init-fashion.jpg" class="" width="600">
+
+<p>这与预期的样式出入较大，因为还没有设置对应的主题，默认采用的是landscape主题。本博客，以及<a target="_blank" rel="noopener" href="https://liam.page/">始终博客</a>都采用了NexT.Gemini主题。不过在进入主题之前，需要先对博客根目录下的<code>_config.yml</code>做一些全局站点配置，这里仅对部分关键配置进行展开，其他配置参数按照默认即可。</p>
+<table>
+<thead>
+<tr>
+<th>配置项</th>
+<th>参数</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>title</td>
+<td>站点标题</td>
+<td>在浏览器标签和站点菜单栏显示的站点标题</td>
+</tr>
+<tr>
+<td>subtitle</td>
+<td>站点副标题</td>
+<td>在站点菜单栏中显示的站点副标题</td>
+</tr>
+<tr>
+<td>author</td>
+<td>作者名</td>
+<td></td>
+</tr>
+<tr>
+<td>language</td>
+<td>语言</td>
+<td>中文语言设置是zh-CN，要和主题所在文件目录<code>/theme/***/languages/**.yml</code>下的文件名对应</td>
+</tr>
+<tr>
+<td>timezone</td>
+<td>时区</td>
+<td>可以使用<code>Asia/Shanghai</code></td>
+</tr>
+<tr>
+<td>theme</td>
+<td>主题</td>
+<td>基于Hexo框架的主题样式，例如NexT，需要和theme目录下的主题目录相对应</td>
+</tr>
+<tr>
+<td>url</td>
+<td>站点域名</td>
+<td>可以作为参数显示在文章版权栏</td>
+</tr>
+<tr>
+<td>post_asset_folder</td>
+<td>true</td>
+<td>启用后，新建文章同时会建立同名的资源文件夹</td>
+</tr>
+</tbody></table>
+<h1 id="NexT主题配置"><a href="#NexT主题配置" class="headerlink" title="NexT主题配置"></a>NexT主题配置</h1><p>NexT主题的安装按照原作者iissnan制作的<a target="_blank" rel="noopener" href="http://theme-next.iissnan.com/">文档</a>指导即可，不过需要注意2点：</p>
+<ol>
+<li>NexT已经转向社区维护，因此截至当前(2022-10-15)与Hexo兼容性较好的NexT主题clone地址应该是<a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next">https://github.com/theme-next/hexo-theme-next</a> ，而不是原作者iissnan的仓库。</li>
+<li>出于将主题配置与主题文件解耦的考虑，不建议直接在NexT主题文件夹主题配置文件<code>_config.yml</code>，而应当在博客根目录下配置<code>_config.&#123;theme-name&#125;.yml</code>文件，对于NexT主题，文件名可以为<code>_config.next.yml</code>。这个文件配置会在网站加载时覆盖对应主题文件夹内的<code>_config.yml</code>，实现与直接修改主题文件夹内配置一样的功能。</li>
+</ol>
+<p>在修改完Hexo站点配置中的主题后，站点页面是这样的：</p>
+<img src="/2022/10/15/HexoBlog1/next-init-fashion.jpg" class="" width="600">
+
+<p>可以看到，主题样式已经和预期接近，但仍需进一步调整主题配置。首先将NexT theme目录下的<code>_config.yml</code>复制为根目录的<code>_config.next.yml</code>，并对以下字段进行修改，其余默认即可：</p>
+<table>
+<thead>
+<tr>
+<th>配置项</th>
+<th>参数</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>creative_commons.sidebar</td>
+<td>true</td>
+<td>是否在站点页菜单栏显示版权</td>
+</tr>
+<tr>
+<td>subtcreative_commons.post</td>
+<td>true</td>
+<td>是否在每篇文章中显示版权</td>
+</tr>
+<tr>
+<td>scheme</td>
+<td>Gemini</td>
+<td>主题细分样式，多种可选</td>
+</tr>
+<tr>
+<td>menu</td>
+<td>菜单栏选项</td>
+<td>建议开启home, about, tags, categories, archives</td>
+</tr>
+<tr>
+<td>avatar.url</td>
+<td>头像文件位置</td>
+<td>可以在菜单栏下方显示自定义头像</td>
+</tr>
+<tr>
+<td>social</td>
+<td>社交外链</td>
+<td>显示在头像下方的社交网站链接</td>
+</tr>
+<tr>
+<td>valine.language</td>
+<td>zh-Hans</td>
+<td>设置语言为简体中文</td>
+</tr>
+</tbody></table>
+<p>配置完毕后，站点页面是这样：</p>
+<img src="/2022/10/15/HexoBlog1/next-configured-fashion.jpg" class="" width="600">
+
+<p>这个界面与目标站点样式一致，但是<code>关于</code>，<code>标签</code>，<code>分类</code>还并不能打开，因为还没有在<code>source</code>目录下加入相应内容。</p>
+<h1 id="关于，标签与分类"><a href="#关于，标签与分类" class="headerlink" title="关于，标签与分类"></a>关于，标签与分类</h1><p>这三个页面的定位是<code>page</code>，关键字分别为<code>categories</code>, <code>tags</code> 与 <code>about</code>，下面以<code>分类</code>为例简述页面创建过程。</p>
+<p>在博客文件目录命令行使用如下命令</p>
+<figure class="highlight shell"><figcaption><span>创建分类页面</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
+
+<p>这样可以在<code>source</code>目录下创建出包含一个<code>index.html</code>文件的<code>categories</code>目录。随后，在<code>index.html</code>的Front-matter内容增加一行，使得index.html的内容变成如下：</p>
+<figure class="highlight text"><figcaption><span>新的index.html内容示例</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 2022-10-15 21:17:31</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>此时主页上的分类页面即可正常运行，对于<code>标签</code>和<code>关于</code>页面的操作类似。</p>
+<h1 id="修改scaffolds-post模板"><a href="#修改scaffolds-post模板" class="headerlink" title="修改scaffolds post模板"></a>修改scaffolds post模板</h1><p><code>scaffolds</code>目录下的<code>post.md</code>模板是在创建新文章时的初始Front-matter内容，建议修改为如下格式，注意实际的双花括号之间没有空格，这里的空格只是为了不被转为属性数据。</p>
+<figure class="highlight text"><figcaption><span>新的index.html内容示例</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123; &#123; title &#125; &#125;</span><br><span class="line">date: &#123; &#123; date &#125; &#125;</span><br><span class="line">keywords: </span><br><span class="line">categories:</span><br><span class="line">tags:</span><br><span class="line">description:</span><br><span class="line">---</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p><code>title</code>和<code>date</code>就是字面含义；<code>keywords</code>中的内容主要用于生成<code>sitemap.xml</code>，对博客进行简单的SEO，方便提交到各大搜索引擎；后2个key的内容会被自动收录到分类和标签；<code>description</code>中的内容将被作为文章摘要在站点页面显示。</p>
+<p>PS: 自动部署，更多有意思的配置，文内搜索等将在之后的文章添加</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Hao Huang
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://ender8848.github.io/2022/10/15/HexoBlog1/" title="Hexo-NexT博客搭建(一)基本配置">https://ender8848.github.io/2022/10/15/HexoBlog1/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+              <a href="/tags/NexT/" rel="tag"># NexT</a>
+              <a href="/tags/Blog/" rel="tag"># Blog</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2022/10/27/Past23Years/" rel="next" title="一个“意义怪”的20年">
+      一个“意义怪”的20年 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8Hexo"><span class="nav-number">1.</span> <span class="nav-text">为什么使用Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">Hexo站点配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#NexT%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">NexT主题配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%EF%BC%8C%E6%A0%87%E7%AD%BE%E4%B8%8E%E5%88%86%E7%B1%BB"><span class="nav-number">4.</span> <span class="nav-text">关于，标签与分类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9scaffolds-post%E6%A8%A1%E6%9D%BF"><span class="nav-number">5.</span> <span class="nav-text">修改scaffolds post模板</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Hao Huang"
+      src="/logo/logo.jpg">
+  <p class="site-author-name" itemprop="name">Hao Huang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ender8848" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ender8848" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/people/huang-hao-12-12/posts" title="Zhihu → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;huang-hao-12-12&#x2F;posts" rel="noopener" target="_blank"><i class="fa fa-zhihu fa-fw"></i>Zhihu</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hao Huang</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
